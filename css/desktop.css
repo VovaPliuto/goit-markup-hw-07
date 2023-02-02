@@ -94,4 +94,18 @@
   .footer-form {
     margin-left: 80px;
   }
+
+  .portfolio-section {
+    background: var(--main-bg-color);
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-cards {
+    margin-top: 72px;
+  }
+
+  .portfolio .item {
+    width: calc((100% - 48px) / 3);
+  }
 }
