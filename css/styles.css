@@ -75,7 +75,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.title-two {
+.title-two,
+.advantages-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -93,9 +94,8 @@ body {
 
 .container {
   padding: 0 15px;
-  width: 1158px;
+  min-width: 320px;
   margin: 0 auto;
-  /* outline: 1px solid red; */
 }
 
 /* --- HEADER --- */
@@ -107,6 +107,8 @@ body {
 /* --- LOGO --- */
 
 .logo {
+  display: inline-block;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -121,6 +123,9 @@ body {
 }
 
 /* --- SITE NAVIGATION --- */
+.header.section {
+  position: relative;
+}
 
 .navigation {
   display: flex;
@@ -132,94 +137,100 @@ body {
   align-items: center;
 }
 
-.nav-menu {
-  display: flex;
-  margin-left: 76px;
-}
-
+.nav-menu,
 .nav-address {
+  display: none;
+}
+
+.mob-menu-open {
+  stroke: var(--title-text-color);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mob-menu-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: #000000;
+
+  cursor: pointer;
 }
 
-.nav-menu-item {
-  display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  padding: 40px;
+  background-color: var(--main-bg-color);
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+.mobile-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
   letter-spacing: 0.02em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--title-text-color);
 }
 
-.nav-menu .nav-list + .nav-list {
-  margin-left: 40px;
+.mobile-menu-item, .mobile-address-tel {
+  margin-bottom: 40px;
 }
 
-.nav-menu-item:hover,
-.nav-menu-item:focus {
+.mobile-address-tel {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(40 / 36);
   color: var(--accent-color);
 }
 
-.nav-list {
-  position: relative;
+.mobile-address-email {
+  display: inline-block;
+  margin-bottom: 48px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.mobile-team-socials {
+  display: flex;
+  justify-content: start;
+  list-style: none;
+  gap: 20px;
+  margin-top: 8px;
 }
 
 .current {
-  color: var(--accent-color);
-}
-
-.current::after {
-  content: "";
-
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-
-  height: 4px;
-  width: 100%;
-  background-color: var(--ocean-color);
-  border-radius: 2px;
-}
-
-.current:hover {
-  color: var(--primary-text-color);
-}
-
-.address-item {
-  color: var(--primary-text-color);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-item-icon {
-  display: flex;
-  align-items: center;
-}
-
-.address-item:hover,
-.address-item:focus {
-  color: var(--accent-color);
-}
-
-.nav-address .nav-list + .nav-list {
-  margin-left: 40px;
+  color: var(--ocean-color);
 }
 
 /* --- HERO --- */
 .hero.section {
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
 }
 
 .hero {
@@ -227,18 +238,26 @@ body {
 
   background-color: var(--title-text-color);
   background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    url(../images/dark-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/dark-bg-mobile@2x.jpg);
+  }
 }
 
 .hero .title {
   color: var(--main-bg-color);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: calc(40 / 36);
   letter-spacing: 0.02em;
-  max-width: 496px;
+  max-width: 376px;
   margin: 0 auto;
   /* text-align: center; */
 }
@@ -253,7 +272,7 @@ body {
   line-height: 1.19;
   font-weight: 500;
   letter-spacing: 0.04em;
-  margin-top: 48px;
+  margin-top: 72px;
   padding: 16px 32px;
   border-radius: 3px;
   border: 0;
@@ -271,25 +290,19 @@ body {
 
 /* --- OUR ADVANTAGES --- */
 .advantages {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .advantages .list {
   display: flex;
-  gap: 24px;
 }
 
-.advantages .item {
-  width: calc(100% - 72px / 4);
-}
 .advantages .main-text {
   margin-top: 8px;
 }
 
 .advant-item-icon {
-  /* max-width: 264px;
-    height: 112px; */
   background-color: var(--cloud-color);
   border-radius: 4px;
   padding: 24px 100px;
@@ -320,13 +333,16 @@ body {
 
 .team {
   background-color: var(--cloud-color);
-  padding: 120px 0;
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
 .team .list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 72px;
-  gap: 24px;
+  row-gap: 72px;
 }
 
 .team-card {
@@ -383,29 +399,27 @@ body {
   fill: var(--cloud-color);
 }
 
-/* --- OUR CUSTOMERS */
+/* --- OUR CUSTOMERS --- */
 
 .our-customers-section {
-  padding-top: 130px;
-  padding-bottom: 120px;
   text-align: center;
 }
 
 .customers-list {
   display: flex;
   margin-top: 72px;
-  gap: 24px;
+  column-gap: 16px;
 }
 
 .customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  /* width: calc((100% - 16px) / 2); */
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
   fill: var(--light-slate-color);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -424,6 +438,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  overflow: auto;
 
   width: 100%;
   height: 100%;
@@ -435,7 +450,7 @@ body {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop.is-hidden, .mobile-menu.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -452,7 +467,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 408px;
+  min-width: 90%;
   min-height: 584px;
   padding: 24px;
 
@@ -595,7 +610,8 @@ body {
   border: 1.25px solid var(--title-text-color);
   border-radius: 2px;
 
-  transition: background-color var(--transition-main), color var(--transition-main), border var(--transition-main);
+  transition: background-color var(--transition-main), color var(--transition-main),
+    border var(--transition-main);
 }
 
 .check-icon {
@@ -647,9 +663,7 @@ body {
 /* --- FOOTER --- */
 .footer {
   background-color: var(--title-text-color);
-  padding: 100px 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 96px 0;
 }
 
 .footer .logo-studio {
@@ -671,21 +685,21 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-top: 16px;
-  max-width: 264px;
+  max-width: 268px;
 }
 
 .footer-first-block .logo {
   display: block;
 }
 
-.footer-second-block {
+/* .footer-second-block {
   margin-left: 120px;
-}
+} */
 
-.footer-container {
+/* .footer-container {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .footer-socials {
   display: flex;
@@ -705,16 +719,16 @@ body {
   background-color: var(--green-color);
 }
 
-.footer-form {
+/* .footer-form {
   margin-left: 80px;
-}
+} */
 
-.footer-form-flex {
+/* .footer-form-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-}
+} */
 
 .footer-label {
   display: block;
@@ -722,7 +736,7 @@ body {
 }
 
 .footer-email-input {
-  min-width: 264px;
+  width: 100%;
   min-height: 40px;
   padding: 8px 16px;
 
