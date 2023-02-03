@@ -13,9 +13,9 @@
     />
     <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/mobile.css">
-    <link rel="stylesheet" href="./css/tablet.css">
-    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
 
   <body>
@@ -81,49 +81,35 @@
               <a href="tel:+110001111111" class="link mobile-address-tel">+11 (000) 111-11-11</a>
             </li>
             <li class="mobile-address-item">
-              <a href="mailto:info@devstudio.com" class="link mobile-address-email">info@devstudio.com</a>
+              <a href="mailto:info@devstudio.com" class="link mobile-address-email"
+                >info@devstudio.com</a
+              >
             </li>
           </ul>
           <ul class="mobile-team-socials">
             <li class="social-item">
-              <a
-                class="team-social-link link"
-                href="https://www.instagram.com/"
-                target="_blank"
-              >
+              <a class="team-social-link link" href="https://www.instagram.com/" target="_blank">
                 <svg class="social-icon" width="16" height="16">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
-              <a
-                class="team-social-link link"
-                href="https://www.twitter.com/"
-                target="_blank"
-              >
+              <a class="team-social-link link" href="https://www.twitter.com/" target="_blank">
                 <svg class="social-icon" width="16" height="16">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
-              <a
-                class="team-social-link link"
-                href="https://www.facebook.com/"
-                target="_blank"
-              >
+              <a class="team-social-link link" href="https://www.facebook.com/" target="_blank">
                 <svg class="social-icon" width="16" height="16">
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
-              <a
-                class="team-social-link link"
-                href="https://www.linkedin.com/"
-                target="_blank"
-              >
+              <a class="team-social-link link" href="https://www.linkedin.com/" target="_blank">
                 <svg class="social-icon" width="16" height="16">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
@@ -133,7 +119,7 @@
         </div>
       </div>
     </header>
-    
+
     <main>
       <!-- Portfolio -->
       <section class="portfolio-section section">
@@ -165,12 +151,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img1-min.jpg"
-                      alt="Bank App Interface Concept"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile.jpg    1x,
+                          ./images/portfolio-img-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img1-min.jpg" alt="Bank App Interface Concept" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -187,12 +177,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img2-min.jpg"
-                      alt="Blue Square"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile2.jpg    1x,
+                          ./images/portfolio-img-mobile2@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img2-min.jpg" alt="Blue Square" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -209,12 +203,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img3-min.jpg"
-                      alt="Notebook and Smartphone"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile3.jpg    1x,
+                          ./images/portfolio-img-mobile3@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img3-min.jpg" alt="Notebook and Smartphone" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -231,12 +229,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img4-min.jpg"
-                      alt="Interior of a Car"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile4.jpg    1x,
+                          ./images/portfolio-img-mobile4@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img4-min.jpg" alt="Interior of a Car" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -253,12 +255,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img5-min.jpg"
-                      alt="Screen Wallpapers"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile5.jpg    1x,
+                          ./images/portfolio-img-mobile5@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img5-min.jpg" alt="Screen Wallpapers" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -275,12 +281,19 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img6-min.jpg"
-                      alt="Smiling Girl With Phone and Earphones"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile6.jpg    1x,
+                          ./images/portfolio-img-mobile6@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/portfolio-img6-min.jpg"
+                        alt="Smiling Girl With Phone and Earphones"
+                      />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -297,12 +310,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img7-min.jpg"
-                      alt="Instagram Stories Concept"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile7.jpg    1x,
+                          ./images/portfolio-img-mobile7@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img7-min.jpg" alt="Instagram Stories Concept" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -319,12 +336,19 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img8-min.jpg"
-                      alt="Woman With the Net of the Fruits"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile8.jpg    1x,
+                          ./images/portfolio-img-mobile8@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/portfolio-img8-min.jpg"
+                        alt="Woman With the Net of the Fruits"
+                      />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
@@ -341,12 +365,16 @@
               <li class="item">
                 <a href="" class="portfolio-link">
                   <div class="card-thumb">
-                    <img
-                      src="./images/portfolio-img9-min.jpg"
-                      alt="Barista Makes Coffe"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio-img-mobile9.jpg    1x,
+                          ./images/portfolio-img-mobile9@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img src="./images/portfolio-img9-min.jpg" alt="Barista Makes Coffee" />
+                    </picture>
                     <div class="card-overlay">
                       <p class="card-overlay-text text">
                         14 Stylish and User-Friendly App Design Concepts · Task Manager App ·

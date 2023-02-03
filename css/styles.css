@@ -142,6 +142,7 @@ body {
   display: none;
 }
 
+/* --- MOBILE MENU --- */
 .mob-menu-open {
   stroke: var(--title-text-color);
   display: flex;
@@ -154,10 +155,12 @@ body {
 }
 
 .mob-menu-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -193,6 +196,10 @@ body {
 
 .mobile-menu-item, .mobile-address-tel {
   margin-bottom: 40px;
+}
+
+.mobile-menu-list {
+  padding-top: 40px;
 }
 
 .mobile-address-tel {
@@ -840,6 +847,12 @@ body {
   margin-top: 48px;
 }
 
+.portfolio-cards img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .portfolio .main-text {
   margin-top: 8px;
 }
@@ -853,7 +866,7 @@ body {
 }
 
 .portfolio .item {
-  width: calc(100% - 30px);
+  width: 100%;
 }
 
 /* .portfolio img {
