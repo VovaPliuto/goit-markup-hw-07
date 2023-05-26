@@ -12,3 +12,31 @@
     refs.mobile.classList.toggle("is-hidden");
   }
 })();
+
+const refs = {
+  btnFilter: document.querySelector(".portfolio-filter"),
+  cardsList: document.querySelectorAll(".portfolio .item"),
+};
+
+refs.btnFilter.addEventListener("click", onFilterBtnClick);
+
+function onFilterBtnClick(e) {
+  // console.log(e.target.nodeName);
+  if (e.target.nodeName !== "BUTTON") {
+    return;
+  }
+
+  refs.cardsList.forEach((el) => el.removeAttribute("style"));
+
+  const filterValue = e.target.dataset.id;
+  if (filterValue === "all") {
+    return refs.cardsList.forEach((el) => el.removeAttribute("style"));
+  }
+  refs.cardsList.forEach((el) => {
+    if (el.dataset.id !== filterValue) {
+      el.style.display = "none";
+    }
+  });
+}
+
+console.log(refs.cardsList);
